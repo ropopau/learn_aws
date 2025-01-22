@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "learn-aws-code"
+version = "0.1.0"
+description = "Infrastructure for my AWS learning journey"
+authors = ["Sanghyeon PARK - dsanghyeon@gmail.com"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aws-cdk-lib = "^2.166.0"
+pytest = "^8.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

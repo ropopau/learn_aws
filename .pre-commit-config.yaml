@@ -1,0 +1,29 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: check-added-large-files
+- repo: local
+  hooks:
+  - id: isorter
+    name: isorter (task)
+    entry: doit isort
+    language: system
+    pass_filenames: false
+  - id: linter
+    name: linter (task)
+    entry: doit format
+    language: system
+    pass_filenames: false
+  - id: styler
+    name: styler (task)
+    entry: doit style
+    language: system
+    pass_filenames: false
+- repo: https://github.com/compilerla/conventional-pre-commit
+  rev: v2.4.0
+  hooks:
+    - id: conventional-pre-commit
+      name: conventional-pre-commit
+      stages: [commit-msg]
+      args: [feat, fix, chore, ci, test, revert, refactor, perf, build, deps, doc, docs, style]
